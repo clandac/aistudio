@@ -11,17 +11,17 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            /* Background image with overlay for better text readability */
-            background-image: url('https://placehold.co/1920x1080/152550/FF451A?text=Robot+talking+to+humans'); /* Placeholder image */
+            /* Background image of a robot communicating with humans */
+            background-image: url('https://images.unsplash.com/photo-1596542718107-526402324f46?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxyb2JvdCUyMGNvbW11bmljYXRpbmclMjB3aXRoJTIwaHVtYW5zfGVufDB8fHx8MTcwMTYxMjM0MHww&ixlib=rb-4.0.3&q=80&w=1080');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed; /* Keeps background fixed during scroll */
             color: #FFFFFF; /* Default text color for better contrast on dark background */
         }
-        /* Overlay for the background image to make text more readable */
+        /* Overlay for the background image to make text more readable, providing transparency */
         .bg-overlay {
-            background-color: rgba(21, 37, 80, 0.8); /* #152550 with 80% opacity */
+            background-color: rgba(21, 37, 80, 0.8); /* #152550 with 80% opacity for transparency */
         }
         /* Custom colors for Tailwind */
         .text-primary-orange {
@@ -47,6 +47,10 @@
                 <!-- Logo/Site Title -->
                 <div class="flex items-center flex-shrink-0 text-white mr-6">
                     <span class="font-semibold text-2xl tracking-tight text-primary-orange">Genesys AI Studio</span>
+                </div>
+                <!-- Robot Image in Header -->
+                <div class="flex-grow flex justify-center md:justify-start">
+                     <img src="https://placehold.co/60x60/FF451A/FFFFFF?text=AI" alt="Modern Robot Icon" class="w-10 h-10 md:w-12 md:h-12 rounded-full mr-4">
                 </div>
                 <!-- Navigation Links -->
                 <div class="w-full block flex-grow md:flex md:items-center md:w-auto">
