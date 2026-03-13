@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opciones de Agente - Genesys AI</title>
+    <title>Genesys AI Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            /* Sophisticated and technological background image */
             background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af324?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxjaXJjdWl0JTIwYm9hcmQlMjBhYnN0cmFjdHxlbnwwfHx8fDE3MDc5MzU5OTd8MA&ixlib=rb-4.0.3&q=80&w=1080');
             background-size: cover;
             background-position: center;
@@ -16,9 +17,11 @@
             background-attachment: fixed;
             color: #FFFFFF;
         }
+        /* Overlay for the background image to make text more readable */
         .bg-overlay {
-            background-color: rgba(21, 37, 80, 0.8);
+            background-color: rgba(21, 37, 80, 0.8); /* #152550 with 80% opacity */
         }
+        /* Custom colors for Tailwind */
         .text-primary-orange {
             color: #FF451A;
         }
@@ -37,6 +40,7 @@
     <div class="bg-overlay absolute inset-0 z-0"></div>
 
     <div class="relative z-10 flex flex-col min-h-screen">
+        
         <header class="bg-primary-blue bg-opacity-90 shadow-lg py-4 px-6 md:px-12 rounded-b-lg">
             <nav class="flex items-center justify-between flex-wrap">
                 <div class="flex items-center flex-shrink-0 mr-6">
@@ -45,33 +49,34 @@
                     </span>
                 </div>
                 <div>
-                   <a href="#" onclick="window.close();" class="inline-block text-sm px-6 py-2 leading-none rounded-full text-white bg-primary-blue hover:bg-gray-700 transition duration-300 ease-in-out font-bold">
-                      < Vuelve
-                   </a>
+                    <a href="https://help.mypurecloud.com/articles/about-ai-studio/" target="_blank" class="inline-block text-sm px-6 py-2 leading-none rounded-full text-white bg-primary-orange hover:bg-orange-600 transition duration-300 ease-in-out font-bold">
+                        Get Started
+                    </a>
                 </div>
             </nav>
         </header>
 
         <main class="flex-grow flex items-center justify-center p-4 md:p-8">
             <div class="text-center max-w-5xl bg-primary-blue bg-opacity-80 p-8 md:p-12 rounded-xl shadow-2xl border-2 border-primary-orange">
-                <h1 class="text-4xl md:text-5xl font-extrabold mb-10 leading-tight">
-                    <span class="text-white">Elige tu Tipo de</span> <span class="text-primary-orange">Agente</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                    <span class="text-white">Innovating the Future with</span> <span class="text-primary-orange">Genesys AI Studio</span>
                 </h1>
+                <p class="text-lg md:text-xl text-white mb-10 max-w-2xl mx-auto">
+                    At Genesys, we harness the power of artificial intelligence to transform businesses and create intelligent solutions for a smarter world.
+                </p>
                 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <a href="#" class="bg-primary-blue border border-gray-700 p-8 rounded-xl flex flex-col items-center justify-center text-center shadow-lg transform hover:scale-105 transition duration-300 ease-in-out hover:border-primary-orange">
-                        <svg class="w-12 h-12 text-primary-orange mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"></path></svg>
-                        <span class="text-white font-bold text-xl">Standard Bot</span>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+                    <a href="https://www.genesys.com/capabilities/ai-studio" target="_blank" class="w-full md:w-auto inline-block bg-primary-orange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-center">
+                        Discover Our Solutions
                     </a>
                     
-                    <a href="#" class="bg-primary-blue border border-gray-700 p-8 rounded-xl flex flex-col items-center justify-center text-center shadow-lg transform hover:scale-105 transition duration-300 ease-in-out hover:border-primary-orange">
-                       <svg class="w-12 h-12 text-primary-orange mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
-                        <span class="text-white font-bold text-xl">Virtual Agent</span>
+                    <a href="https://www.youtube.com/watch?v=WtSt1hhDOk4" target="_blank" class="w-full md:w-auto flex items-center justify-center bg-primary-orange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zm6.707 3.293a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L10.414 10l2.707-2.707a1 1 0 00-1.414-1.414l-3 3z"></path></svg>
+                        Quick Video
                     </a>
 
-                    <a href="#" class="bg-primary-blue border border-gray-700 p-8 rounded-xl flex flex-col items-center justify-center text-center shadow-lg transform hover:scale-105 transition duration-300 ease-in-out hover:border-primary-orange">
-                      <svg class="w-12 h-12 text-primary-orange mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        <span class="text-white font-bold text-xl">Agentic Virtual Agent</span>
+                    <a href="https://clandac.github.io/aistudio/travelagency.html" target="_blank" class="w-full md:w-auto inline-block bg-primary-orange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-center">
+                        See it in action in our Travel Agency
                     </a>
                 </div>
             </div>
@@ -85,5 +90,20 @@
             </div>
         </footer>
     </div>
+
+    <script type="text/javascript" charset="utf-8">
+      (function (g, e, n, es, ys) {
+        g['_genesysJs'] = e;
+        g[e] = g[e] || function () {
+          (g[e].q = g[e].q || []).push(arguments)
+        };
+        g[e].t = 1 * new Date();
+        g[e].c = es;
+        ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
+      })(window, 'Genesys', 'https://apps.mypurecloud.de/genesys-bootstrap/genesys.min.js', {
+        environment: 'prod-euc1',
+        deploymentId: '869c3516-ec00-4c0c-bf36-865fb9a7010f'
+      });
+    </script>
 </body>
 </html>
