@@ -5,13 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genesys AI Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+            background-color: #060a14;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
-            margin: 0;
-            /* UPDATED: Modern Contact Center + AI Neural Tech background */
-            background-image: url('https://images.unsplash.com/photo-1549923155-415fc00b383e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxjb250YWN0JTIwY2VudGVyJTIwQUklMjB0ZWNobm9sb2d5fGVufDBfHx8fDE3MDk0NzU0NDF8MA&ixlib=rb-4.0.3&q=80&w=1920');
+            /* MOTHERBOARD BACKGROUND - High Contrast */
+            background-image: 
+                linear-gradient(to bottom, rgba(6, 10, 20, 0.8), rgba(21, 37, 80, 0.8)), 
+                url('https://images.pexels.com/photos/163100/circuit-circuit-board-resistor-computer-163100.jpeg?auto=compress&cs=tinysrgb&w=1920');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -19,103 +27,85 @@
             color: #FFFFFF;
         }
 
-        /* Overlay to maintain professional Genesys feel and readability */
-        .bg-overlay {
-            background-color: rgba(10, 20, 50, 0.82); 
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        /* Custom colors for Tailwind */
         .text-primary-orange { color: #FF451A; }
         .bg-primary-orange { background-color: #FF451A; }
         .bg-primary-blue { background-color: #152550; }
-        .border-primary-orange { border-color: #FF451A; }
 
-        /* Blink/Pulse Animation - UPDATED TO WHITE */
-        @keyframes subtlePulse {
-            0%, 100% { opacity: 1; color: #FFFFFF; }
-            50% { opacity: 0.6; color: #FFFFFF; }
+        /* WHITE BLINKING ANIMATION */
+        @keyframes whiteBlink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.2; }
         }
-        .animate-blink-white {
-            animation: subtlePulse 2.5s infinite ease-in-out;
+        .animate-disclaimer {
+            animation: whiteBlink 1.5s infinite;
+            color: #FFFFFF !important;
         }
 
-        .glass-panel {
-            background: rgba(21, 37, 80, 0.75);
+        .main-card {
+            background: rgba(10, 20, 50, 0.8);
             backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 69, 26, 0.5);
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col relative">
-    
-    <div class="bg-overlay"></div>
+<body class="flex flex-col min-h-screen">
 
-    <div class="relative z-10 flex flex-col min-h-screen">
-        
-        <header class="bg-primary-blue bg-opacity-90 shadow-lg py-4 px-6 md:px-12 rounded-b-lg">
-            <nav class="flex items-center justify-between flex-wrap">
-                <div class="flex items-center flex-shrink-0 mr-6">
-                    <span class="font-semibold text-2xl tracking-tight">
-                        <span class="text-primary-orange">Genesys</span> <span class="text-white">Agentic AI</span>
-                    </span>
-                </div>
-                <div>
-                    <a href="https://help.mypurecloud.com/articles/about-ai-studio/" class="inline-block text-sm px-6 py-2 leading-none rounded-full text-white bg-primary-orange hover:bg-orange-600 transition duration-300 ease-in-out font-bold">
-                        Get Started
-                    </a>
-                </div>
-            </nav>
-        </header>
-
-        <div class="w-full py-3 px-4 text-center tracking-wide">
-            <p class="font-bold text-sm md:text-base animate-blink-white uppercase">
-                ⚠️ This is not an official Genesys website but one created by a Genesys employee to showcase the existing AI technology.
-            </p>
-        </div>
-
-        <main class="flex-grow flex items-center justify-center p-4 md:p-8">
-            <div class="text-center max-w-5xl glass-panel p-8 md:p-12 rounded-xl shadow-2xl border-2 border-primary-orange">
-                <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-                    <span class="text-white">Innovating the Future with</span> <span class="text-primary-orange">Genesys AI Studio</span>
-                </h1>
-                <p class="text-lg md:text-xl text-white mb-10 max-w-2xl mx-auto">
-                    At Genesys, we harness the power of artificial intelligence to transform businesses and create intelligent solutions for a smarter world.
-                </p>
-                
-                <div class="flex flex-col md:flex-row justify-center items-center gap-4">
-                    <a href="https://www.genesys.com/capabilities/ai-studio" class="w-full md:w-auto inline-block bg-primary-orange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-center">
-                        Discover Our Solutions
-                    </a>
-                    
-                    <a href="https://www.youtube.com/watch?v=WtSt1hhDOk4" class="w-full md:w-auto flex items-center justify-center bg-primary-orange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-center">
-                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zm6.707 3.293a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L10.414 10l2.707-2.707a1 1 0 00-1.414-1.414l-3 3z"></path></svg>
-                        Quick Video
-                    </a>
-
-                    <a href="https://clandac.github.io/aistudio/travelagencyhome.html" class="w-full md:w-auto inline-block bg-primary-orange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-center">
-                        See it in action - Travel Agency
-                    </a>
-                    
-                    <a href="https://clandac.github.io/aistudio/genesyshome.html" class="w-full md:w-auto inline-block bg-primary-orange hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition duration-300 ease-in-out text-center">
-                        See it in action - Genesys
-                    </a>
-                </div>
+    <header class="bg-primary-blue bg-opacity-95 shadow-xl py-4 px-6 border-b border-primary-orange border-opacity-40">
+        <nav class="flex items-center justify-between max-w-7xl mx-auto w-full">
+            <div class="flex items-center">
+                <span class="font-black text-2xl tracking-tighter">
+                    <span class="text-primary-orange">Genesys</span> <span class="text-white">Agentic AI</span>
+                </span>
             </div>
-        </main>
+            <a href="https://help.mypurecloud.com/articles/about-ai-studio/" class="text-sm px-6 py-2 rounded-full text-white bg-primary-orange hover:bg-orange-600 transition-all font-bold uppercase tracking-widest">
+                Get Started
+            </a>
+        </nav>
+    </header>
 
-        <footer class="bg-primary-blue bg-opacity-90 py-6 px-6 md:px-12 text-center text-white text-sm rounded-t-lg mt-auto">
-            <p>© 2026 - Carlos Landa - Technical Account Manager at Genesys. All rights reserved.</p>
-            <div class="flex justify-center space-x-4 mt-2">
-                <a href="#" class="hover:text-primary-orange transition duration-300">Privacy Policy</a>
-                <a href="#" class="hover:text-primary-orange transition duration-300">Terms of Service</a>
-            </div>
-        </footer>
+    <div class="w-full py-4 text-center">
+        <p class="font-black text-xs md:text-sm animate-disclaimer uppercase tracking-[0.2em]">
+            ⚠️ This is not an official Genesys website but one created by a Genesys employee to showcase the existing AI technology.
+        </p>
     </div>
+
+    <main class="flex-grow flex items-center justify-center p-6">
+        <div class="text-center max-w-5xl main-card p-10 md:p-16 rounded-3xl">
+            <h1 class="text-5xl md:text-7xl font-black mb-8 leading-none tracking-tight">
+                <span class="text-white">Innovating with</span><br>
+                <span class="text-primary-orange">Genesys AI Studio</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-white mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+                At Genesys, we harness the power of artificial intelligence to transform businesses and create intelligent solutions for a smarter world.
+            </p>
+            
+            <div class="flex flex-col md:flex-row flex-wrap justify-center items-center gap-6">
+                <a href="https://www.genesys.com/capabilities/ai-studio" class="w-full md:w-auto bg-primary-orange hover:scale-105 transition-transform text-white font-black py-4 px-10 rounded-full text-lg shadow-2xl flex items-center justify-center">
+                    Discover Solutions
+                </a>
+                
+                <a href="https://www.youtube.com/watch?v=WtSt1hhDOk4" class="w-full md:w-auto flex items-center justify-center bg-primary-orange hover:scale-105 transition-transform text-white font-black py-4 px-10 rounded-full text-lg shadow-2xl">
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                    Quick Video
+                </a>
+
+                <a href="https://clandac.github.io/aistudio/travelagencyhome.html" class="w-full md:w-auto bg-primary-orange hover:scale-105 transition-transform text-white font-black py-4 px-10 rounded-full text-lg shadow-2xl">
+                    Travel Agency Demo
+                </a>
+                
+                <a href="https://clandac.github.io/aistudio/genesyshome.html" class="w-full md:w-auto bg-primary-orange hover:scale-105 transition-transform text-white font-black py-4 px-10 rounded-full text-lg shadow-2xl">
+                    Genesys Demo
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-primary-blue py-6 text-center text-white border-t border-primary-orange border-opacity-30 mt-auto">
+        <p class="text-sm font-medium">© 2026 — Carlos Landa — Technical Account Manager at Genesys</p>
+    </footer>
+
 </body>
 </html>
